@@ -6,7 +6,7 @@
 /*   By: tbruins <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 14:12:53 by tbruins           #+#    #+#             */
-/*   Updated: 2018/05/31 11:41:17 by tbruins          ###   ########.fr       */
+/*   Updated: 2018/06/05 10:44:27 by tbruins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr_fd(*s++, 1);
+	ft_putstr_fd(s++, 1);
 	ft_putchar_fd('\n', 1);
 }

@@ -6,13 +6,13 @@
 /*   By: tbruins <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 18:47:18 by tbruins           #+#    #+#             */
-/*   Updated: 2018/05/31 10:20:26 by tbruins          ###   ########.fr       */
+/*   Updated: 2018/06/05 11:59:07 by tbruins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*a;
 	size_t			i;

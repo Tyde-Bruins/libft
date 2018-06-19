@@ -6,19 +6,21 @@
 /*   By: tbruins <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 11:58:32 by tbruins           #+#    #+#             */
-/*   Updated: 2018/05/31 10:23:36 by tbruins          ###   ########.fr       */
+/*   Updated: 2018/06/06 13:48:03 by tbruins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const *restrict s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	unsigned char 	*dst;
+	int		i;
+	int		j;
 
-	dst = s1;
-	while (*s1)
-		s1++;
-	ft_strncpy(s1, s2);
-	return (dst);
+	i = -1;
+	j = (int)ft_strlen(s1);
+	while (*(s2 + ++i) && i < (int)n)
+		*(s1 + j++) = *(s2 + i);
+	*(s1 + j) = '\0';
+	return (s1);
 }

@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_wdcount.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbruins <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 12:30:38 by tbruins           #+#    #+#             */
-/*   Updated: 2018/06/06 13:48:06 by tbruins          ###   ########.fr       */
+/*   Created: 2018/06/04 16:14:24 by tbruins           #+#    #+#             */
+/*   Updated: 2018/06/04 16:22:06 by tbruins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+int		ft_wdcount(const char *str, char c)
 {
-	char	*dest;
-	size_t	i;
+	int	count;
+	int	i;
 
-	dest = dst;
-	i = -1;
-	while (++i < len)
+	count = 0;
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*src)
-			*dest++ = *src++;
+		if (str[i] != c)
+		{
+			while (str[i] != c && str[i] != '\0')
+			{
+				i++;
+			}
+			count++;
+		}
 		else
-			while (i++ < len)
-				*dest++ = '\0';
+			i++;
 	}
-	return (dst);
+	return (count);
 }

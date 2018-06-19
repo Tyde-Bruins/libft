@@ -6,7 +6,7 @@
 /*   By: tbruins <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 12:31:10 by tbruins           #+#    #+#             */
-/*   Updated: 2018/05/31 10:23:20 by tbruins          ###   ########.fr       */
+/*   Updated: 2018/06/07 13:01:56 by tbruins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 			*d++ = *s;
 			n--;
 		}
-		*s++;
+		s++;
 	}
 	*d = '\0';
 	return (dlen + (s - src));

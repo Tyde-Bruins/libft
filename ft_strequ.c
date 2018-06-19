@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbruins <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 12:30:38 by tbruins           #+#    #+#             */
-/*   Updated: 2018/06/06 13:48:06 by tbruins          ###   ########.fr       */
+/*   Created: 2018/06/01 16:43:45 by tbruins           #+#    #+#             */
+/*   Updated: 2018/06/07 10:40:32 by tbruins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	char	*dest;
-	size_t	i;
-
-	dest = dst;
-	i = -1;
-	while (++i < len)
-	{
-		if (*src)
-			*dest++ = *src++;
-		else
-			while (i++ < len)
-				*dest++ = '\0';
-	}
-	return (dst);
+	if (!s1 || !s2)
+		return (0);
+	if (!ft_strcmp((char *)s1, (char *)s2))
+		return (1);
+	return (0);
 }
